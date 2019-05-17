@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-4 py-5 text-center">
+      <h3>ADD</h3>
+      <input #name type="text" class="form-control" placeholder="Add Name...">
+      <button type="button" (click)= 'add(name.value)' class="btn btn-primary mt-1">Add Name</button>
+    </div>
+    <div class="col-lg-4 py-5 text-center">
+      <h3>SEARCH</h3>
+      <input #searchName type="text" (keyup)="search(searchName.value)" class="form-control" placeholder="Search Names ...">
+      <div class="panel-scroll">
+        <ul class="list-group">
+          <li *ngFor="let name of resultsNames" class="list-group-item">{{name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-4 py-5 text-center">
+      <h3>HISTORY</h3>
+      <div class="panel-scroll">
+        <ul class="list-group">
+          <li *ngFor="let history of resultHistory" class="list-group-item">{{history}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
